@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<adios-config>
+
+    <io name="wrf-postprocessing">
+        <engine type="BP4">
+            <parameter key="RendezvousReaderCount" value="0"/>
+            <parameter key="QueueLimit" value="1"/>
+            <parameter key="QueueFullPolicy" value="Discard"/>
+            <parameter key="OpenTimeoutSecs" value="30.0"/>
+        </engine>
+    </io>
+</adios-config>
