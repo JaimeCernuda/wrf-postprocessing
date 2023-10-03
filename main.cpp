@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
     exit(1);
   }
 
-  adios2::ADIOS adios("postprocessing-wrf.xml");
+  adios2::ADIOS adios("postprocessing-wrf.xml", MPI_COMM_WORLD);
   adios2::IO io = adios.DeclareIO("wrf-postprocessing");
   adios2::Engine engine = io.Open(instream, adios2::Mode::Read);
   std::cout << "output all variable name" << std::endl;
