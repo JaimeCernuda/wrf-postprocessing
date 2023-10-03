@@ -20,7 +20,7 @@ int main(int argc, char** argv) {
   }
 
   adios2::ADIOS adios("postprocessing-wrf.xml", MPI_COMM_WORLD);
-  adios2::IO io = adios.DeclareIO("wrf-postprocessing");
+  adios2::IO io = adios.DeclareIO("wrfout_d01_2019-11-26_12:00:00");
   adios2::Engine engine = io.Open(instream, adios2::Mode::Read);
   std::cout << "output all variable name" << std::endl;
   std::map<std::string, adios2::Params> variables = io.AvailableVariables(); // Print all the variable names
